@@ -1,0 +1,32 @@
+.main-container {
+  display: flex;
+}
+
+.user-container {
+  min-height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.user-container__buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.user-container__btn {
+  padding: 1rem 2rem;
+  border: none;
+  background-image: linear-gradient(to right top, var(--grey-light-1), var(--grey-light-4));
+  cursor: pointer;
+  border-radius: .3rem;
+  font-size: 2rem;
+  font-family: inherit;
+}
+
+.map-container {
+  flex: 1;
+}

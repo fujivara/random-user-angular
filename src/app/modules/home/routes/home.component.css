@@ -1,0 +1,19 @@
+.home-container {
+  background-image: linear-gradient(to right bottom, var(--color-primary-dark), var(--color-primary-light));
+}
+
+.switch-btn,
+switch-btn:after{
+  border: 0.3rem solid var(--grey-light-1);
+  border-radius: 100%;
+  width: 15rem;
+  height: 12rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--grey-light-1);
+  background-color: var(--color-primary-light);
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}

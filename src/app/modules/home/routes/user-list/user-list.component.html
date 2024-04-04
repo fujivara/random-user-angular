@@ -1,0 +1,8 @@
+<div class="list-container">
+  <ul class="user-list">
+    <li class="user-list__item" *ngFor="let userDetail of userDetailsList">
+      <app-user-profile [userDetails]="userDetail"></app-user-profile>
+    </li>
+  </ul>
+  <h2 class="list-container__message" *ngIf="!userDetailsList.length">List is empty</h2>
+</div>

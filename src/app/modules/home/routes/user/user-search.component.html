@@ -1,0 +1,14 @@
+<div class="main-container">
+  <div class="user-container">
+    <app-user-profile [userDetails]="{user: currentUser, weather: currentWeather}"></app-user-profile>
+    <div class="user-container__buttons">
+      <button class="user-container__btn" (click)="fetchData()">Fetch user</button>
+      <button class="user-container__btn" (click)="saveDetails()">Save</button>
+    </div>
+  </div>
+  <div class="map-container">
+    <app-user-map></app-user-map>
+  </div>
+</div>
+
+

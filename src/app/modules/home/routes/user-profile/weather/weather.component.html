@@ -1,0 +1,15 @@
+<div class="weather-box">
+    <img src="{{weather.icon}}" alt="Weather icon" class="weather-box__icon">
+    <h3 class="weather-box__title">{{weather.title}}, {{weather.currTemperature}}&deg;</h3>
+    <div class="weather_box__min-max">{{weather.minTemperature}}&deg;/{{weather.maxTemperature}}&deg;</div>
+    <ul class="weather-list">
+      <li class="weather-list__item" *ngFor="let weatherListItem of weather.temperatureList">
+        <div class="weather-list__hour">
+          {{weatherListItem.hour}}h
+        </div>
+        <div class="weather-list__temperature">
+          {{weatherListItem.temperature}}&deg;
+        </div>
+      </li>
+    </ul>
+</div>

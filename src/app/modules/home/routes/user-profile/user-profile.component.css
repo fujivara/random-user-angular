@@ -1,0 +1,35 @@
+.user-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 60rem;
+  width: 35rem;
+  padding: 3rem;
+  background-color: var(--grey-light-2);
+  color: var(--grey-dark-2);
+  border-radius: 2rem;
+}
+
+.user-box__name {
+  font-size: 2.75rem;
+  text-align: center;
+}
+
+.user-box__gender {
+  font-size: 2rem;
+}
+
+.user-box__icon {
+  width: 12rem;
+}
+
+.user-box__location {
+  font-size: 1.5rem;
+}
+
+.user-box__email {
+  font-size: 2rem;
+  color: var(--grey-dark-1);
+}
