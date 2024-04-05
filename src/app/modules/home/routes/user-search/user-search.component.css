@@ -25,6 +25,10 @@
   };
 }
 
+.blur_container {
+  filter: blur(.2rem);
+}
+
 .user-container__buttons {
   display: flex;
   gap: 2rem;

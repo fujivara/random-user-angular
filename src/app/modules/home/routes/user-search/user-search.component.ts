@@ -48,6 +48,8 @@ export class UserSearchComponent {
     ],
   };
 
+  isLoading = false;
+
   constructor (
     private readonly userService: UserService,
     private readonly weatherService: WeatherService,
@@ -55,6 +57,7 @@ export class UserSearchComponent {
   ) {}
 
   fetchData () {
+    this.isLoading = true;
     this.userService.get().subscribe((user) => {
       this.currentUser = user;
       this.userService.newUserFetched.next(user);
@@ -62,6 +65,7 @@ export class UserSearchComponent {
       this.weatherService.getWithCoordinates(user.location.coordinates).subscribe((weather) => {
         this.weatherService.newWeather.next(weather);
         this.currentWeather = weather;
+        this.isLoading = false;
       });
     });
   }
