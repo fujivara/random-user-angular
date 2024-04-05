@@ -16,6 +16,7 @@
     width: fit-content;
     max-width: 70vw;
     align-items: stretch;
+    gap: 0;
   };
 
   @media only screen and (max-width: 37.5em) {
@@ -33,10 +34,12 @@
   gap: 1.5rem;
   text-align: center;
   height: 100%;
+  flex: 0 0 45%;
 }
 
 .user-box__name {
   font-size: 2.75rem;
+  width: 100%;
 }
 
 .user-box__gender {
@@ -54,6 +57,10 @@
 .user-box__email {
   font-size: 2rem;
   color: var(--grey-dark-1);
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 1.8rem;
+  };
 }
 
 .user-box__weather {
