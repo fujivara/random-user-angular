@@ -6,7 +6,7 @@ import { LocalstorageService } from '../../services/localstorage.service';
 import { UserWeatherModel } from '../../models/user-weather.model';
 
 @Component({
-  selector: 'app-user',
+  selector: 'app-user-search',
   templateUrl: './user-search.component.html',
   styleUrl: './user-search.component.css',
 })

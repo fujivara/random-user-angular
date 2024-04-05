@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserSearchComponent } from './routes/user/user-search.component';
+import { UserSearchComponent } from './routes/user-search/user-search.component';
 import { UserListComponent } from './routes/user-list/user-list.component';
 import { HomeComponent } from './routes/home.component';
 
