@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable, Subject } from 'rxjs';
 import { UserModel } from '../models/user.model';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ export class UserService {
   newUserFetched = new Subject<UserModel>();
 
   get (): Observable<UserModel> {
-    return this.http.get('https://randomuser.me/api/').pipe(map((response: any) => {
+    return this.http.get(environment.USER_BASE_URL).pipe(map((response: any) => {
       const { results: [user] } = response;
       const {
         name,

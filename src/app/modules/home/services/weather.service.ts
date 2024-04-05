@@ -4,6 +4,7 @@ import { CoordinatesModel } from '../models/user.model';
 import { map, Observable, Subject } from 'rxjs';
 import { UserWeatherModel } from '../models/user-weather.model';
 import * as weatherIcons from '../../../../assets/data/weather/weather-icons.json';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,7 @@ export class WeatherService {
     const { latitude, longitude } = coordinates;
 
     return this.http.get(`
-      https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&hourly=temperature_2m&forecast_days=1
+      ${environment.WEATHER_BASE_URL}?latitude=${latitude}&longitude=${longitude}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&hourly=temperature_2m&forecast_days=1
     `).pipe(map((response: any) => {
       const {
         current_weather: {
