@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { icon, latLng, marker, tileLayer } from 'leaflet';
-import { CoordinatesModel } from '../../../models/user.model';
+import { UserCoordinatesModel } from '../../../models/user.model';
 import { UserService } from '../../../services/user.service';
 import { Subscription } from 'rxjs';
 
@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
   styleUrl: './user-map.component.css',
 })
 export class UserMapComponent implements OnInit, OnDestroy {
-  coordinates: CoordinatesModel = {
+  coordinates: UserCoordinatesModel = {
     latitude: '50.4504',
     longitude: '30.5245',
   };
@@ -20,7 +20,7 @@ export class UserMapComponent implements OnInit, OnDestroy {
   constructor (private readonly userService: UserService) {}
 
   ngOnInit () {
-    this.newUserSubscription = this.userService.newUserFetched.subscribe((user) => {
+    this.newUserSubscription = this.userService.newUser.subscribe((user) => {
       const { location: { coordinates: { longitude, latitude } } } = user;
       this.layers = [
         marker([Number.parseFloat(latitude), Number.parseFloat(longitude)],

@@ -11,7 +11,7 @@
   border-radius: 2rem;
 
   @media only screen and (max-width: 68.75em) {
-    height: 40rem;
+    height: 35rem;
     flex-direction: row;
     width: fit-content;
     max-width: 70vw;
@@ -21,7 +21,6 @@
 
   @media only screen and (max-width: 37.5em) {
     height: 29rem;
-    width: fit-content;
     max-width: 100vw;
   };
 }
@@ -61,17 +60,5 @@
 
   @media only screen and (max-width: 37.5em) {
     font-size: 1.8rem;
-  };
-}
-
-.user-box__weather {
-  border-radius: .3rem;
-
-  @media only screen and (min-width: 68.75em) {
-    width: 100%;
-  };
-
-  @media only screen and (max-width: 68.75em) {
-    max-width: 30vw;
   };
 }

@@ -10,7 +10,7 @@ import { environment } from '../../../../environments/environment';
 export class UserService {
   constructor (private readonly http: HttpClient) {}
 
-  newUserFetched = new Subject<UserModel>();
+  newUser = new Subject<UserModel>();
 
   get (): Observable<UserModel> {
     return this.http.get(environment.USER_BASE_URL).pipe(map((response: any) => {

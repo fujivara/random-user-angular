@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CoordinatesModel } from '../models/user.model';
+import { UserCoordinatesModel } from '../models/user.model';
 import { map, Observable, Subject } from 'rxjs';
 import { UserWeatherModel } from '../models/user-weather.model';
-import * as weatherIcons from '../../../../assets/data/weather/weather-icons.json';
+import weatherIcons from '../../../../assets/data/weather/weather-icons.json';
 import { environment } from '../../../../environments/environment';
 
 @Injectable({
@@ -15,7 +15,7 @@ export class WeatherService {
 
   constructor (private readonly http: HttpClient) {}
 
-  getWithCoordinates (coordinates: CoordinatesModel): Observable<UserWeatherModel> {
+  getWithCoordinates (coordinates: UserCoordinatesModel): Observable<UserWeatherModel> {
     const { latitude, longitude } = coordinates;
 
     return this.http.get(`

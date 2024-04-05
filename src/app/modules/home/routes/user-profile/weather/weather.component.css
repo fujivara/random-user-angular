@@ -10,7 +10,7 @@
 
   @media only screen and (max-width: 68.75em) {
     height: 100%;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 2rem 2rem 0;
     max-width: 30vw;
   }
 
@@ -28,7 +28,6 @@
 }
 
 .weather_box__min-max {
-  justify-self: center;
   font-size: 2rem;
 }
 
@@ -36,8 +35,8 @@
   overflow-x: auto;
   display: flex;
   align-items: center;
-  scrollbar-width: thin;
   text-align: center;
+  scrollbar-width: thin;
   list-style: none;
   font-size: 1.5rem;
   width: 100%;
@@ -47,7 +46,7 @@
 
 .weather-list__item {
   margin: 0 1rem;
-  flex: 1;
+  flex: 0 0 10%;
 }
 
 .weather-list__hour {

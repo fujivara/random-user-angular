@@ -60,7 +60,7 @@ export class UserSearchComponent {
     this.isDataFetching = true;
     this.userService.get().subscribe((user) => {
       this.currentUser = user;
-      this.userService.newUserFetched.next(user);
+      this.userService.newUser.next(user);
 
       this.weatherService.getWithCoordinates(user.location.coordinates).subscribe((weather) => {
         this.weatherService.newWeather.next(weather);
