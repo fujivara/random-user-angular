@@ -7,7 +7,6 @@
   @media only screen and (max-width: 68.75em) {
     height: 100vh;
   };
-
 }
 
 .user-list {
@@ -42,4 +41,5 @@
   color: var(--grey-light-4);
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+  text-align: center;
 }
