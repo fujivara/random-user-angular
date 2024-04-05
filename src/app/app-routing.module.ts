@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule) },
+  { path: 'error', loadChildren: () => import('./modules/error/error.module').then((m) => m.ErrorModule) },
+  { path: '**', redirectTo: '/error/404' },
 ];
 
 @NgModule({
