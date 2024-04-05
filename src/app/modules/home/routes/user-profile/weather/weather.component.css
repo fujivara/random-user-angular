@@ -11,6 +11,11 @@
   @media only screen and (max-width: 68.75em) {
     height: 100%;
     border-radius: 0 1rem 1rem 0;
+    max-width: 30vw;
+  }
+
+  @media only screen and (max-width: 35.5em) {
+    max-width: 50vw;
   }
 }
 

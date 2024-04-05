@@ -1,9 +1,9 @@
 <div class="main-container">
   <div class="user-container">
-    <app-user-profile [ngClass]="{'blur_container': isLoading}" [userDetails]="{user: currentUser, weather: currentWeather}"></app-user-profile>
+    <app-user-profile [ngClass]="{'blur_container': isDataFetching}" [userDetails]="{user: currentUser, weather: currentWeather}"></app-user-profile>
     <div class="user-container__buttons">
       <button class="user-container__btn" (click)="fetchData()">Fetch user</button>
-      <button class="user-container__btn" (click)="saveDetails()">Save</button>
+      <button class="user-container__btn"  (click)="saveDetails()" [ngClass]="{'blur_container':  isDataFetching}">Save</button>
     </div>
   </div>
   <div class="map-container">
