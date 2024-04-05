@@ -12,7 +12,7 @@ export class LocalstorageService {
 
   constructor (private readonly weatherService: WeatherService) {
     this.data.push(...this.getAll());
-    this.weatherDataUpdate = interval(10000).pipe(map(() => {
+    this.weatherDataUpdate = interval(300000).pipe(map(() => {
       this.data.map((userDetail) => {
         const { user: { location: { coordinates } } } = userDetail;
 

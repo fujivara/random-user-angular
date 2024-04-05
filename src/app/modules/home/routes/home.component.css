@@ -1,13 +1,18 @@
 .home-container {
   background-image: linear-gradient(to right bottom, var(--color-primary-dark), var(--color-primary-light));
+
+  @media only screen and (max-width: 37.5em) {
+    display: flex;
+    flex-direction: column;
+  };
 }
 
 .switch-btn,
-switch-btn:after{
+.switch-btn:after {
   border: 0.3rem solid var(--grey-light-1);
   border-radius: 100%;
-  width: 15rem;
-  height: 12rem;
+  width: 7vw;
+  height: 6vw;
   font-size: 2rem;
   font-weight: bolder;
   color: var(--grey-light-1);
@@ -16,4 +21,14 @@ switch-btn:after{
   position: absolute;
   top: 2rem;
   left: 2rem;
+
+  @media only screen and (max-width: 37.5em) {
+    border-radius: 0;
+    border: none;
+    position: relative;
+    height: 8vh;
+    width: 100%;
+    top: 0;
+    left: 0
+  };
 }

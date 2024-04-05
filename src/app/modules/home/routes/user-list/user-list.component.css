@@ -3,6 +3,11 @@
   align-items: center;
   justify-items: center;
   min-height: 100vh;
+
+  @media only screen and (max-width: 68.75em) {
+    height: 100vh;
+  };
+
 }
 
 .user-list {
@@ -16,6 +21,14 @@
   background-image: linear-gradient(to left top,  var(--color-primary-light), var(--grey-light-1));
   list-style: none;
   border-radius: 1rem;
+
+  @media only screen and (max-width: 68.75em) {
+    flex-direction: column;
+    height: 80%;
+    gap: 2rem;
+    overflow-y: auto;
+    width: 100vw;
+  };
 }
 
 .user-list__item {

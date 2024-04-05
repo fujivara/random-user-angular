@@ -1,5 +1,9 @@
 .main-container {
   display: flex;
+
+  @media only screen and (max-width: 68.75em) {
+    flex-direction: column;
+  };
 }
 
 .user-container {
@@ -10,6 +14,15 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
+
+  @media only screen and (max-width: 68.75em) {
+    min-height: 50vh;
+    width: 100%;
+  };
+
+  @media only screen and (max-width: 37.5em) {
+    min-height: 45vh;
+  };
 }
 
 .user-container__buttons {
@@ -29,4 +42,13 @@
 
 .map-container {
   flex: 1;
+
+  @media only screen and (max-width: 68.75em) {
+    height: 50vh;
+    flex: unset;
+  };
+
+  @media only screen and (max-width: 37.5em) {
+    height: 47vh;
+  };
 }

@@ -1,8 +1,10 @@
 <div class="user-box">
-  <h2 class="user-box__name">{{userDetails.user.name.title}} {{userDetails.user.name.first}} {{userDetails.user.name.last}}</h2>
-  <p class="user-box__email">{{userDetails.user.email}}</p>
-  <h3 class="user-box__gender">{{userDetails.user.gender}}</h3>
-  <img src="{{userDetails.user.picture}}" alt="User icon" class="user-box__icon">
-  <p class="user-box__location">{{userDetails.user.location.city}}, {{userDetails.user.location.state}}, {{userDetails.user.location.country}}</p>
-  <app-weather style="width: 100%" [weather]="userDetails.weather"></app-weather>
+  <div class="user-content">
+    <h2 class="user-box__name">{{userDetails.user.name.title}} {{userDetails.user.name.first}} {{userDetails.user.name.last}}</h2>
+    <p class="user-box__email">{{userDetails.user.email}}</p>
+    <h3 class="user-box__gender">{{userDetails.user.gender}}</h3>
+    <img src="{{userDetails.user.picture}}" alt="User icon" class="user-box__icon">
+    <p class="user-box__location">{{userDetails.user.location.city}}, {{userDetails.user.location.state}}, {{userDetails.user.location.country}}</p>
+  </div>
+  <app-weather class="user-box__weather" [weather]="userDetails.weather"></app-weather>
 </div>
